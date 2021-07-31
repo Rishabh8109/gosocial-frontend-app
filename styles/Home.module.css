@@ -1,121 +1,188 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+
+.cardHeader {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardHeader > div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.cardHeader > div > div {
+  margin-left: 10px;
+  line-height: 1.6;
+}
+
+.cardHeader > div > div > p:nth-child(1) {
+  color: black;
+  font-weight: 600;
+}
+
+.cardHeader > div > div > p:nth-child(2) {
+  color: rgb(126, 126, 126);
+ font-size: 12px;
+}
+
+.cardHeader p {
+  font-size: 14px;
+  color: rgb(143, 143, 143);
+}
+
+.cardBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  color: grey;
+}
+
+.cardBody input {
+   width: 80%;
+   background-color: white;
+   border: none;
+   outline: none;
+}
+
+.cardBody .icon , .cardHeader .icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.postCard {
+  background-color: white;
+  margin: 1rem 0;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.postCardBody {
+  padding: 1rem;
+  border-bottom: 1px solid rgb(240, 240, 240);
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.postCardBody > div {
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  grid-column-gap: 25px;
+  align-items: center;
+  width: auto;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.postCardBody img {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   margin: 1rem 0;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.postCardBody .title {
+  color: grey;
+  font-size: .9rem; 
+  width: 90%;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.postCardBody .actions {
+   padding: 0 2rem;
+   border-bottom: 1px solid whitesmoke;
+}
+
+
+ .postCardBody ul li {
+  list-style-type: none;
+  font-weight: 600;
+  color: grey;
+  display: flex;
+  align-items: center;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+ .postCardBody ul li .icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
+.postCardBody  ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postCardFooter {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.commentBox {
+  width: 100%;
+  position: relative;
+}
+
+.commentBox input {
+  width: 100%;
+  height: 40px;
+  background: #f9f9f9;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: .7rem;
+  outline: none;
+  margin-left: 10px;
+ 
+}
+
+.commentBox input::placeholder {
+   opacity: .7;
+}
+
+
+.commentBox .icon:nth-child(1) {
+  color: grey;
+}
+
+.commentBox .icons {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.commentBox .icon {
+  margin: 0 7px;
+  font-size: 1.2rem;
+   color: grey;
+   cursor: pointer;
+}
+
+
+@media screen and (max-width : 400px) {
+ .postCardBody ul li {
+    font-size: .5rem;
+ }
+
+ .postCardBody .actions {
+   padding : 0 0;
+ }
+ 
+ .postCardBody ul li .icon {
+   font-size: .6rem;
+ }
 }

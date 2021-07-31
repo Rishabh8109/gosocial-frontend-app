@@ -1,0 +1,181 @@
+.card {
+    background-color: white;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+  }
+  
+  
+  .cardHeader {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  .cardHeader p {
+    font-size: 14px;
+    color: rgb(138, 136, 136);
+  }
+
+  .cardBody {
+      padding: 10px;
+      position: relative;
+  }
+
+  .cardBody ul {
+      display: flex;
+      overflow-x: hidden;
+      position: relative;
+  }
+
+
+   
+  .cardBody ul li {
+      list-style-type: none;
+      margin:1rem .4rem;
+      cursor: pointer;
+      padding-left: .6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1rem;
+      text-align: center;
+  }
+
+  .cardBody ul li:hover {
+     background-color: rgb(245, 245, 245);
+     transition: all .5s ease;
+     border-radius: 10px;
+     
+  }
+
+  .cardBody ul li .addIcon {
+       background-color: rgb(255, 255, 255);
+       border-radius: 50%;
+       width: 40px;
+       height: 40px;
+       padding: 10px;
+       box-shadow: 1px 1px 14px 1px rgba(154, 210, 255, 0.24);
+       color: rgb(0, 110, 255);
+  }
+
+
+  .cardBody ul li:nth-child(1) p {
+      font-size: 10px;
+      font-weight: 600;
+      color: grey;
+      margin-top: 10px;
+  }
+
+  .cardBody ul li > img{
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 100%;
+      border: 2px solid rgb(0, 140, 255);
+  }
+
+  .cardBody ul li > div { 
+      line-height: 1.5;
+      margin-top: 10px;
+  }
+
+  .cardBody ul li > div > p:nth-child(1) {
+     font-size: .7rem;
+     font-weight: 600;
+     color: grey;
+  }
+
+  .cardBody ul li > div > p:nth-child(2) {
+     font-size: .5rem;
+     color: rgb(177, 177, 177);
+     font-weight: 600;
+  }
+
+  .cardBody button{
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        background-color: rgba(145, 196, 253, 0.144);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        color: rgb(0, 102, 255);
+        cursor: pointer;
+        letter-spacing: 1px;
+  }
+
+  .eventBody {
+      padding: 1rem;
+  }
+
+  .eventBody div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: .8rem 0
+  }
+
+  .eventBody  div > .icon {
+      font-size: 1.4rem;
+      color: rgb(180, 180, 180);
+  }
+
+  .eventBody div > p {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(99, 97, 97);
+      margin-left: 10px;
+  }
+
+  .cardBody .arrowForward {
+      position: absolute;
+      top: 40%;
+      right: -2%;
+      z-index: 1;
+      font-size: 1.4rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 1px 2px 1px 2px rgb(243, 243, 243);
+  }
+
+  .cardBody .arrowForward:hover {
+      background-color: whitesmoke
+  }
+  
+  .cardBody .arrowBack {
+      position: absolute;
+      top: 40%;
+      left: -2%;
+      z-index : 1;
+      font-size: 1.4rem;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 1px 2px 1px 2px rgb(243, 243, 243);
+      display: none;
+      padding: 10px 0 0 8px ;
+  }
+
+ .cardBody .show{
+     display: block;
+ }
